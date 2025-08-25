@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beranda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #0b3d2e;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Section Title */
+      .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0 15px;
+      }
+
+      .section-title h5 {
+        font-weight: bold;
+      }
+
+      .section-title a {
+        color: red;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* Product Wrapper */
+      .product-wrapper {
+        background: transparent;
+        color: white;
+        text-align: left;
+      }
+
+      /* Card Gambar */
+      .product-image-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      .product-image-card img {
+        max-height: 160px;
+        object-fit: contain;
+      }
+
+      /* Varian Warna */
+      .variant-bar {
+        display: flex;
+        gap: 5px;
+        margin: 5px 0 8px;
+      }
+
+      .variant-box {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .variant-box:hover {
+        transform: scale(1.1);
+      }
+
+      /* Nama & Harga */
+      .product-info p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .product-info small {
+        font-size: 13px;
+        color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom shadow-sm" style="background-color:#0b3d2e;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="#">
+          <img src="../foto/logo.png" alt="Logo" width="100" class="d-inline-block align-text-center">
+        </a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="beranda.html">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gender
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="wanita.html">Perempuan</a></li>
+                <li><a class="dropdown-item" href="pria.html">Laki-laki</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" href="galery.html">Equipment</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Filter -->
+    <div class="filter-bar d-flex align-items-center" style="background:#0b3d2e; border-top:1px solid #ccc; padding:8px 15px;">
+      <button class="btn btn-dark">Filter</button>
+      <button class="btn btn-light">Harga</button>
+      <button class="btn btn-light">Warna</button>
+      <button class="btn btn-light">Ukuran</button>
+    </div>
+
+    <!-- Banner -->
+    <div class="card text-bg-dark border-0 rounded-0">
+      <img src="../foto/bg.png" class="card-img" alt="Banner">
+    </div>
+
+    <div class="container my-4">
+      <!-- Bundling Hemat -->
+      <div class="section-title">
+        <h5>Bundling Lebih Hemat</h5>
+        <a href="selengkapnya.html">Selengkapnya</a>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <!-- Produk 1 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <div class="product-image-card">
+              <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk">
+            </div>
+            <div class="variant-bar">
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+            </div>
+            <div class="product-info">
+              <p>PONTIAC LANDSCAPE 2.0</p>
+              <small>Rp 245.000</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 2 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <div class="product-image-card">
+              <img src="../foto/tas2.jpg" class="img-fluid" alt="Produk">
+            </div>
+            <div class="variant-bar">
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+            </div>
+            <div class="product-info">
+              <p>X-MARKET POUCH 1A</p>
+              <small>Rp 125.000</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 3 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <div class="product-image-card">
+              <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk">
+            </div>
+            <div class="variant-bar">
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+            </div>
+            <div class="product-info">
+              <p>X-MARKET POUCH 1B</p>
+              <small>Rp 149.000</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk 4 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <div class="product-image-card">
+              <img src="../foto/tas4.jpg" class="img-fluid" alt="Produk">
+            </div>
+            <div class="variant-bar">
+              <div class="variant-box"></div>
+              <div class="variant-box"></div>
+            </div>
+            <div class="product-info">
+              <p>X-MARKET POUCH 1C</p>
+              <small>Rp 179.000</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Bundling Hemat -->
+
+      <div class="container my-4">
+
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
