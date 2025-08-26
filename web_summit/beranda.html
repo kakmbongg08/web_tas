@@ -45,6 +45,12 @@
         padding: 10px;
         text-align: center;
         margin-bottom: 5px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .product-image-card:hover {
+        transform: scale(1.05);
       }
 
       .product-image-card img {
@@ -90,7 +96,7 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom shadow-sm" style="background-color:#0b3d2e;">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color:#0b3d2e;">
       <div class="container-fluid">
         <a class="navbar-brand text-white fw-bold" href="#">
           <img src="../foto/logo.png" alt="Logo" width="100" class="d-inline-block align-text-center">
@@ -124,17 +130,20 @@
     </nav>
 
     <!-- Filter -->
-    <div class="filter-bar d-flex align-items-center" style="background:#0b3d2e; border-top:1px solid #ccc; padding:8px 15px;">
-      <button class="btn btn-dark">Filter</button>
-      <button class="btn btn-light">Harga</button>
-      <button class="btn btn-light">Warna</button>
-      <button class="btn btn-light">Ukuran</button>
+    <div class="filter-bar d-flex align-items-center gap-2" 
+         style="background:#0b3d2e; border-top:1px solid #ccc; padding:8px 15px;">
+      <button class="btn btn-outline-light btn-sm">Filter</button>
+      <button class="btn btn-outline-light btn-sm">Harga</button>
+      <button class="btn btn-outline-light btn-sm">Warna</button>
+      <button class="btn btn-outline-light btn-sm">Ukuran</button>
     </div>
+    <!-- Navbar -->
 
     <!-- Banner -->
     <div class="card text-bg-dark border-0 rounded-0">
       <img src="../foto/bg.png" class="card-img" alt="Banner">
     </div>
+    
 
     <div class="container my-4">
       <!-- Bundling Hemat -->
@@ -147,13 +156,15 @@
         <!-- Produk 1 -->
         <div class="col">
           <div class="product-wrapper">
-            <div class="product-image-card">
-              <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk">
-            </div>
+            <a href="detail-produk1.html">
+              <div class="product-image-card">
+                <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk">
+              </div>
+            </a>
             <div class="variant-bar">
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
+              <div class="variant-box red"></div>
+              <div class="variant-box blue"></div>
+              <div class="variant-box green"></div>
             </div>
             <div class="product-info">
               <p>PONTIAC LANDSCAPE 2.0</p>
@@ -165,13 +176,15 @@
         <!-- Produk 2 -->
         <div class="col">
           <div class="product-wrapper">
-            <div class="product-image-card">
-              <img src="../foto/tas2.jpg" class="img-fluid" alt="Produk">
-            </div>
+            <a href="detail-produk2.html">
+              <div class="product-image-card">
+                <img src="../foto/tas2.jpg" class="img-fluid" alt="Produk">
+              </div>
+            </a>
             <div class="variant-bar">
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
+              <div class="variant-box red"></div>
+              <div class="variant-box blue"></div>
+              <div class="variant-box green"></div>
             </div>
             <div class="product-info">
               <p>X-MARKET POUCH 1A</p>
@@ -183,13 +196,15 @@
         <!-- Produk 3 -->
         <div class="col">
           <div class="product-wrapper">
-            <div class="product-image-card">
-              <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk">
-            </div>
+            <a href="detail-produk3.html">
+              <div class="product-image-card">
+                <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk">
+              </div>
+            </a>
             <div class="variant-bar">
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
+              <div class="variant-box yellow"></div>
+              <div class="variant-box blue"></div>
+              <div class="variant-box green"></div>
             </div>
             <div class="product-info">
               <p>X-MARKET POUCH 1B</p>
@@ -201,12 +216,14 @@
         <!-- Produk 4 -->
         <div class="col">
           <div class="product-wrapper">
-            <div class="product-image-card">
-              <img src="../foto/tas4.jpg" class="img-fluid" alt="Produk">
-            </div>
+            <a href="detail-produk4.html">
+              <div class="product-image-card">
+                <img src="../foto/tas4.jpg" class="img-fluid" alt="Produk">
+              </div>
+            </a>
             <div class="variant-bar">
-              <div class="variant-box"></div>
-              <div class="variant-box"></div>
+              <div class="variant-box red"></div>
+              <div class="variant-box blue"></div>
             </div>
             <div class="product-info">
               <p>X-MARKET POUCH 1C</p>
@@ -215,11 +232,94 @@
           </div>
         </div>
       </div>
-      <!-- End Bundling Hemat -->
+      <!-- Bundling Hemat -->
 
-      <div class="container my-4">
-
+      <!-- Koleksi Baru -->
+      <div class="section-title mt-5">
+        <h5>Koleksi Baru</h5>
+        <a href="koleksi-baru.html">Selengkapnya</a>
       </div>
+
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <!-- Produk Baru 1 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <a href="detail-koleksi1.html">
+              <div class="product-image-card">
+                <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk Baru">
+              </div>
+            </a>
+            <div class="variant-bar">
+              <div class="variant-box yellow"></div>
+              <div class="variant-box blue"></div>
+            </div>
+            <div class="product-info">
+              <p>JUNIOR HOUSE PACK 18L</p>
+              <small>Rp 249.000</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk Baru 2 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <a href="detail-koleksi2.html">
+              <div class="product-image-card">
+                <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk Baru">
+              </div>
+            </a>
+            <div class="variant-bar">
+              <div class="variant-box red"></div>
+              <div class="variant-box blue"></div>
+            </div>
+            <div class="product-info">
+              <p>JUNIOR HOUSE PACK 18L</p>
+              <small>Rp 249.000</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk Baru 3 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <a href="detail-koleksi3.html">
+              <div class="product-image-card">
+                <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk Baru">
+              </div>
+            </a>
+            <div class="variant-bar">
+              <div class="variant-box green"></div>
+              <div class="variant-box yellow"></div>
+            </div>
+            <div class="product-info">
+              <p>JUNIOR HOUSE PACK 18L</p>
+              <small>Rp 249.000</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produk Baru 4 -->
+        <div class="col">
+          <div class="product-wrapper">
+            <a href="detail-koleksi4.html">
+              <div class="product-image-card">
+                <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk Baru">
+              </div>
+            </a>
+            <div class="variant-bar">
+              <div class="variant-box red"></div>
+              <div class="variant-box yellow"></div>
+            </div>
+            <div class="product-info">
+              <p>JUNIOR HOUSE PACK 18L</p>
+              <small>Rp 249.000</small>
+            </div>
+          </div>
+        </div>
+
+       
+      </div>
+      <!-- End Koleksi Baru -->
 
     </div>
 
