@@ -90,67 +90,98 @@
         color: #ddd;
       }
 
-      /* Kategori */
-      .category-card img {
-        max-height: 160px;
-        object-fit: contain;
-        margin-bottom: 10px;
-      }
+      /* Kategori Box */
+.category-box {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-      .category-card h6 {
-        font-weight: bold;
-        color: white;
-      }
+.category-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.category-image {
+  background-color: white;
+  padding: 15px;
+}
+
+.category-image img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.category-label {
+  background-color: #2b1a18; /* cokelat tua */
+  padding: 8px;
+}
+
+.category-label h6 {
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+
     </style>
   </head>
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color:#0b3d2e;">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="#">
-          <img src="../foto/logo.png" alt="Logo" width="100" class="d-inline-block align-text-center">
-        </a>
+<nav class="navbar navbar-expand-lg" style="background-color: #0b3d2e;">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+      <img src="./foto/logo.png" alt="Summit Logo" style="height: 100px;" class="me-2">
+    </a>
 
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Toggle button (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="beranda.html">Beranda</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle text-white" href="beranda.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Gender</a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="wanita.html">Perempuan</a></li>
-                <li><a class="dropdown-item" href="pria.html">Laki-laki</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-white" href="galery.html">Equipment</a>
-            </li>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Beranda</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" 
+             data-bs-toggle="dropdown" aria-expanded="false">Gender</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Pria</a></li>
+            <li><a class="dropdown-item" href="#">Wanita</a></li>
           </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Filter -->
-    <div class="filter-bar d-flex align-items-center gap-2" 
-         style="background:#0b3d2e; border-top:1px solid #ccc; padding:8px 15px;">
-      <button class="btn btn-outline-light btn-sm">Filter</button>
-      <button class="btn btn-outline-light btn-sm">Harga</button>
-      <button class="btn btn-outline-light btn-sm">Warna</button>
-      <button class="btn btn-outline-light btn-sm">Ukuran</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Equipment</a>
+        </li>
+      </ul>
     </div>
-     <!-- Navbar -->
+  </div>
+</nav>
+
+<!-- Filter Bar -->
+<div class="container-fluid py-2" style="background-color: #0b3d2e; border-top: 1px solid #ccc;">
+  <div class="d-flex flex-wrap gap-2">
+    <button class="btn btn-dark rounded-pill px-4">Filter</button>
+    <button class="btn btn-light rounded-pill px-4">Harga</button>
+    <button class="btn btn-light rounded-pill px-4">Warna</button>
+    <button class="btn btn-light rounded-pill px-4">Ukuran</button>
+  </div>
+</div>
+
 
     <!-- Banner -->
     <div class="card text-bg-dark border-0 rounded-0">
-      <img src="../foto/bg.png" class="card-img" alt="Banner">
+      <img src="./foto/bg.png" class="card-img" alt="Banner">
     </div>
     
     <div class="container my-4">
@@ -166,13 +197,13 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas1.jpg" class="img-fluid" alt="Produk">
+                <img src="./foto/tas1.jpg" class="img-fluid" alt="Produk">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb2.jpg"  alt="">
-              <img src="../foto/thumb3.jpg"  alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb2.jpg"  alt="">
+              <img src="./foto/thumb3.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>PONTIAC LANDSCAPE 2.0</p>
@@ -186,12 +217,12 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas2.jpg" class="img-fluid" alt="Produk">
+                <img src="./foto/tas2.jpg" class="img-fluid" alt="Produk">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb2.jpg"  alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb2.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>X-MARKET POUCH 1A</p>
@@ -205,13 +236,13 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas3.jpg" class="img-fluid" alt="Produk">
+                <img src="./foto/tas3.jpg" class="img-fluid" alt="Produk">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb2.jpg"  alt="">
-              <img src="../foto/thumb3.jpg"  alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb2.jpg"  alt="">
+              <img src="./foto/thumb3.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>X-MARKET POUCH 1B</p>
@@ -225,12 +256,12 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas4.jpg" class="img-fluid" alt="Produk">
+                <img src="./foto/tas4.jpg" class="img-fluid" alt="Produk">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb2.jpg"  alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb2.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>X-MARKET POUCH 1C</p>
@@ -242,45 +273,65 @@
       <!-- End Bundling -->
 
       <!-- Kategori -->
-       <div class="container my-4">
-      <div class="section-title">
-        <h5>Kategori</h5>
-      </div>
-      <div class="row row-cols-2 row-cols-md-4 g-5">
-  <div class="col">
-    <div class="card h-100">
-      <img src="../foto/tas1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">BAGS</h5>
-      </div>
-    </div>
+<div class="container my-4">
+  <div class="section-title">
+    <h5>Kategori</h5>
   </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="../foto/sepatu1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">SEPATU</h5>
+  <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
+    
+    <!-- Bags -->
+    <div class="col">
+      <div class="category-box">
+        <div class="category-image">
+          <img src="./foto/tas1.jpg" alt="Bags">
+        </div>
+        <div class="category-label">
+          <h6>BAGS</h6>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="../foto/jam1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">AKSESORIS</h5>
+
+    <!-- Sepatu -->
+    <div class="col">
+      <div class="category-box">
+        <div class="category-image">
+          <img src="./foto/sepatu1.jpg" alt="Sepatu">
+        </div>
+        <div class="category-label">
+          <h6>SEPATU</h6>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="../foto/sandal1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">SANDAL</h5>
+
+    <!-- Aksesoris -->
+    <div class="col">
+      <div class="category-box">
+        <div class="category-image">
+          <img src="./foto/jam1.jpg" alt="Aksesoris">
+        </div>
+        <div class="category-label">
+          <h6>AKSESORIS</h6>
+        </div>
       </div>
     </div>
+
+    <!-- Sandal -->
+    <div class="col">
+      <div class="category-box">
+        <div class="category-image">
+          <img src="./foto/sandal1.jpg" alt="Sandal">
+        </div>
+        <div class="category-label">
+          <h6>SANDAL</h6>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-      <!-- End Kategori -->
+<!-- End Kategori -->
+
+
 
       <!-- Koleksi Baru -->
       <div class="section-title mt-5">
@@ -294,12 +345,12 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
+                <img src="./foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb2.jpg"  alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb2.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>JUNIOR HOUSE PACK 18L</p>
@@ -313,12 +364,12 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
+                <img src="./foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb3.jpg"  alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb3.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>JUNIOR HOUSE PACK 18L</p>
@@ -332,12 +383,12 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
+                <img src="./foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb2.jpg"  alt="">
-              <img src="../foto/thumb3.jpg"  alt="">
+              <img src="./foto/thumb2.jpg"  alt="">
+              <img src="./foto/thumb3.jpg"  alt="">
             </div>
             <div class="product-info">
               <p>JUNIOR HOUSE PACK 18L</p>
@@ -351,12 +402,12 @@
           <div class="product-wrapper">
             <a href="detail.html">
               <div class="product-image-card">
-                <img src="../foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
+                <img src="./foto/tas5.jpg" class="img-fluid" alt="Produk Baru">
               </div>
             </a>
             <div class="thumb-bar">
-              <img src="../foto/thumb1.jpg"  alt="">
-              <img src="../foto/thumb2.jpg" alt="">
+              <img src="./foto/thumb1.jpg"  alt="">
+              <img src="./foto/thumb2.jpg" alt="">
             </div>
             <div class="product-info">
               <p>JUNIOR HOUSE PACK 18L</p>
@@ -367,8 +418,86 @@
       </div>
       <!-- End Koleksi Baru -->
 
+<!-- Gender Section -->
+<div class="container my-5">
+  <div class="row justify-content-center g-4">
+    <!-- Card Pria -->
+    <div class="col-md-3 col-7">
+      <div class="card border-0 shadow-sm position-relative">
+        <img src="./foto/pria.png" class="card-img" alt="Pria" style="height: 300px; object-fit: cover;">
+        <div class="card-img-overlay d-flex justify-content-center align-items-end">
+        </div>
+      </div>
     </div>
 
+    <!-- Card Wanita -->
+    <div class="col-md-3 col-7">
+      <div class="card border-0 shadow-sm position-relative">
+        <img src="./foto/wanita.png" class="card-img" alt="Wanita" style="height: 300px; object-fit: cover;">
+        <div class="card-img-overlay d-flex justify-content-center align-items-end">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gender Section -->
+
+<!-- Footer -->
+<footer class="text-white pt-5" style="background-color: #2f3d35; width:100%;">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & Promo -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">SUMMIT<br>ESSENTIALS</h5>
+        <p style="font-size: 14px;">GEAR UP FOR THE PEAK</p>
+        <p>
+          Dapatkan promo terbaru dan info lainnya hanya<br>
+          dengan mendaftarkan emailmu!
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="col-md-4 mb-4">
+        <div class="row">
+          <div class="col-6">
+            <h6 class="fw-bold">Selengkapnya</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">Beranda</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Gender</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Equipment</a></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <h6 class="fw-bold">Gender</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">Perempuan</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Laki-laki</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Hubungi Kami</h6>
+        <p class="mb-1">+6288888888888</p>
+        <p class="mb-1">@summit_essentials</p>
+        <p style="font-size: 14px;">
+          Setiap Hari 7/24<br>
+          08.00 – 22.00 (Social Media)
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="text-center py-3 mt-3 border-top border-light">
+    <small>© SUMMIT ESSENTIALS – BANYUWANGI</small>
+  </div>
+</footer>
+
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
